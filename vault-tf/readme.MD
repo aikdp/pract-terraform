@@ -35,7 +35,7 @@ Check: type "vault" in server, it works
 ```
 vault server -dev -dev-listen-address="0.0.0.0:8200"
 ```
-Take a new tab for better practice. TO see errors meassages effectively.
+Take a new tab for better practice. To see errors meassages effectively.
 ssh -i <path/to/private/key> ubuntu@public_ip
 
 2. copy and export below command to another terminal
@@ -50,7 +50,10 @@ http://18.188.173.96:8200
 Login into Hashicorp Vault using Token
 4. Enable engine by giving path: kv or secret.
 5. Now create a secret, Sceret_path: test-secret, Secret data: username and Value: Prasad (this is confidential) then save.
-6. Now craete a policy (like in AWS IAM), run below command.
+6. Before creating policy through command line, first we need to create a access-->Enable New Method-->Select Approle--> Enable method.
+then Run below commands in Command line:
+
+7. Now craete a policy (like in AWS IAM), run below command.
 ```
 vault policy write terraform - <<EOF
 path "*" {
